@@ -13,7 +13,8 @@ export default function Login() {
     try {
       const res = await api.post('/auth/login', { username, password });
       localStorage.setItem('token', res.data.access_token);
-      window.location.href = '/profile';
+      navigate('/profile');
+      window.location.reload();
     } catch (err) {
       setError(err.response?.data?.detail || 'Помилка входу');
     }
@@ -24,19 +25,19 @@ export default function Login() {
       <h2>Вхід</h2>
       {error && <div className="error-message">{error}</div>}
       <form onSubmit={handleLogin} className="auth-form">
-        <input 
-          type="text" 
-          placeholder="Ім'я користувача" 
+        <input
+          type="text"
+          placeholder="Ім'я користувача"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          required 
+          required
         />
-        <input 
-          type="password" 
-          placeholder="Пароль" 
+        <input
+          type="password"
+          placeholder="Пароль"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required 
+          required
         />
         <button type="submit" className="btn primary">Увійти</button>
       </form>

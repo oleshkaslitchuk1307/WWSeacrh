@@ -3,22 +3,24 @@
   --bg-dark: #0a0a0c;
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-glass: rgba(10, 10, 12, 0.8);
-  
-  --primary: #8b5cf6; /* Electric Violet */
+
+  --primary: #8b5cf6;
+  /* Electric Violet */
   --primary-glow: rgba(139, 92, 246, 0.5);
-  --secondary: #06b6d4; /* Cyber Cyan */
+  --secondary: #06b6d4;
+  /* Cyber Cyan */
   --secondary-glow: rgba(6, 182, 212, 0.3);
-  
+
   --text-main: #f4f4f5;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
-  
+
   --border-glass: rgba(255, 255, 255, 0.08);
   --accent-gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-  
+
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
-  
+
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-neon: 0 0 20px rgba(139, 92, 246, 0.2);
 }
@@ -35,7 +37,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
-  background-image: 
+  background-image:
     radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.07) 0%, transparent 40%),
     radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.07) 0%, transparent 40%);
 }
@@ -44,7 +46,10 @@ body {
 body::after {
   content: '';
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   opacity: 0.03;
   pointer-events: none;
@@ -81,7 +86,7 @@ body::after {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .nav-brand {
@@ -146,7 +151,7 @@ body::after {
 }
 
 .btn.secondary:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .btn.danger {
@@ -171,8 +176,9 @@ body::after {
   border: 1px solid var(--border-glass);
 }
 
-.search-bar input, .search-bar select {
-  background: rgba(0,0,0,0.3);
+.search-bar input,
+.search-bar select {
+  background: rgba(0, 0, 0, 0.3);
   border: 1px solid var(--border-glass);
   padding: 12px 20px;
   border-radius: 12px;
@@ -208,7 +214,7 @@ body::after {
 .game-card:hover {
   transform: translateY(-10px) scale(1.02);
   border-color: var(--primary);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px var(--primary-glow);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--primary-glow);
 }
 
 .game-img {
@@ -257,7 +263,7 @@ body::after {
 .chat-header {
   padding: 20px 40px;
   border-bottom: 1px solid var(--border-glass);
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .messages-window {
@@ -317,14 +323,14 @@ body::after {
 
 .chat-input-form {
   padding: 30px 40px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
   gap: 15px;
 }
 
 .chat-input-form input {
   flex: 1;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-glass);
   padding: 15px 25px;
   border-radius: 18px;
@@ -342,7 +348,7 @@ body::after {
 }
 
 .friend-item {
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-glass);
   padding: 15px 25px;
   border-radius: 15px;
@@ -354,29 +360,45 @@ body::after {
 }
 
 .friend-item:hover {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-dark);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border-glass);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-dim);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.game-card, .profile-section, .chat-container {
+.game-card,
+.profile-section,
+.chat-container {
   animation: fadeIn 0.6s ease-out forwards;
+}
+
+.search-user {
+  gap: 10px;
 }
