@@ -1,7 +1,7 @@
 import requests
 import sqlite3
 
-API_KEY = "4192bf9d3b2e4be194a458a00ea03629"
+API_KEY = ""
 URL = f"https://api.rawg.io/api/games?key={API_KEY}&page_size=40"
 response = requests.get(URL)
 data = response.json()
